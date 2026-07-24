@@ -119,12 +119,12 @@ export default function FeaturedCars() {
               style={{ borderColor: "#26282d", backgroundColor: "#101114" }}
             >
               {/* ✅ Şəkil konteyneri — Next.js Image ilə */}
-              <div className="fc-media relative w-full aspect-[1/1] overflow-hidden">
+              <div className="fc-media relative w-full aspect-[4/4]  overflow-hidden">
                 <Image
                   src={car.image}
                   alt={`${car.title} - ${car.owner}`}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority={car.id === "01"} // İlk şəkil prioritet yüklənsin
                 />
