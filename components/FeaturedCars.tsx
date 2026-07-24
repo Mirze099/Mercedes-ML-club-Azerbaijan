@@ -225,7 +225,7 @@ const FEATURED_CARS = [
     mileage: "241 000 km",
     city: "Sumqayıt",
     price: "11 200 AZN",
-    image: "/cars/ml270.jpg", // ✅ public/cars/ml270.jpg
+    image: "/images/Sabo/075-2.png", // ✅ public/cars/ml270.jpg
   },
 ];
 
