@@ -16,44 +16,7 @@ export default function Hero() {
       className="relative w-full flex items-center overflow-hidden"
       style={{ backgroundColor: "#0a0b0d", minHeight: "100vh" }}
     >
-      <style jsx global>{`
-        @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
-
-        .hero-display {
-          font-family: "Oswald", sans-serif;
-        }
-        .hero-body {
-          font-family: "Inter", sans-serif;
-        }
-        .hero-outline-text {
-          -webkit-text-stroke: 1px rgba(232, 234, 236, 0.18);
-          color: transparent;
-        }
-        @keyframes hero-fade-up {
-          from {
-            opacity: 0;
-            transform: translateY(24px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .hero-anim-1 {
-          animation: hero-fade-up 0.8s ease 0.1s both;
-        }
-        .hero-anim-2 {
-          animation: hero-fade-up 0.8s ease 0.3s both;
-        }
-        .hero-anim-3 {
-          animation: hero-fade-up 0.8s ease 0.5s both;
-        }
-        .hero-anim-4 {
-          animation: hero-fade-up 0.8s ease 0.7s both;
-        }
-      `}</style>
-
-      {/* Arxa fonda böyük "W166" konturlu mətn — şassi kodu vizual toxuma kimi */}
+      {/* Arxa fonda böyük "W163" konturlu mətn — şassi kodu vizual toxuma kimi */}
       <span
         className="hero-display hero-outline-text absolute select-none pointer-events-none font-bold"
         style={{
