@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Send, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 const FOOTER_LINKS = {
   Klub: [
@@ -116,17 +117,12 @@ export default function CtaAndFooter() {
             {/* Loqo + qısa təsvir */}
             <div className="md:col-span-5">
               <div className="flex items-center gap-3 mb-5">
-                <span
-                  className="flex items-center justify-center w-9 h-9 border"
-                  style={{ borderColor: "#4a4e55", transform: "rotate(45deg)" }}
-                >
-                  <span
-                    className="cf-display font-bold text-sm"
-                    style={{ color: "#e8eaec", transform: "rotate(-45deg)" }}
-                  >
-                    M
-                  </span>
-                </span>
+                <Image
+                  src="/images/Mercedes-Logo.png"
+                  alt="ML Club Logo"
+                  width={50}
+                  height={20}
+                />
                 <span className="flex flex-col leading-none">
                   <span
                     className="cf-display font-semibold text-lg tracking-[0.08em]"

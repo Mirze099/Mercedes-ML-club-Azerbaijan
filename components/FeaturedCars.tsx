@@ -3,43 +3,7 @@
 import Link from "next/link";
 import { Gauge, Calendar, MapPin, ArrowRight } from "lucide-react";
 import Image from "next/image";
-
-// Real datada bu, verilənlər bazasından (üzvün ödədiyi elan) gələcək
-const FEATURED_CARS = [
-  {
-    id: "01",
-    owner: "Sabo",
-    chassis: "W163",
-    title: "ML 350 4MATIC",
-    year: "2004",
-    mileage: "187 000 km",
-    city: "Bakı",
-    price: "18 900 AZN",
-    image: "/images/Sabo/075.png", // ✅ public/Sabo/IMG-1677.png
-  },
-  {
-    id: "02",
-    owner: "Mirzə",
-    chassis: "W163",
-    title: "ML 270 CDI",
-    year: "2002",
-    mileage: "440 000 km",
-    city: "Baku",
-    price: "61 900 AZN",
-    image: "/images/Sway/319.png", // ✅ public/cars/ml63.jpg
-  },
-  {
-    id: "03",
-    owner: "Rəşad Quliyev",
-    chassis: "W163",
-    title: "ML 270 CDI",
-    year: "2003",
-    mileage: "241 000 km",
-    city: "Sumqayıt",
-    price: "11 200 AZN",
-    image: "/images/Sabo/075-2.png", // ✅ public/cars/ml270.jpg
-  },
-];
+import { machines } from "@/data/machines";
 
 export default function FeaturedCars() {
   return (
@@ -47,22 +11,26 @@ export default function FeaturedCars() {
       className="relative w-full py-24 md:py-32"
       style={{ backgroundColor: "#0e0f12" }}
     >
-      <style jsx global>{`
+      <style jsx>{`
         .fc-display {
           font-family: "Oswald", sans-serif;
         }
+
         .fc-body {
           font-family: "Inter", sans-serif;
         }
+
         .fc-card {
           transition:
             border-color 0.3s ease,
             transform 0.3s ease;
         }
+
         .fc-card:hover {
           border-color: #6b6f76;
           transform: translateY(-4px);
         }
+
         .fc-media {
           background: repeating-linear-gradient(
             135deg,
@@ -89,6 +57,7 @@ export default function FeaturedCars() {
                 Seçilmiş elanlar
               </span>
             </div>
+
             <h2
               className="fc-display font-semibold uppercase leading-none"
               style={{
@@ -111,27 +80,32 @@ export default function FeaturedCars() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {FEATURED_CARS.map((car) => (
+          {machines.map((car) => (
             <Link
               href={`/qalereya/${car.id}`}
               key={car.id}
               className="fc-card flex flex-col border"
-              style={{ borderColor: "#26282d", backgroundColor: "#101114" }}
+              style={{
+                borderColor: "#26282d",
+                backgroundColor: "#101114",
+              }}
             >
-              {/* ✅ Şəkil konteyneri — Next.js Image ilə */}
               <div className="fc-media relative w-full aspect-[4/5] overflow-hidden">
                 <Image
                   src={car.image}
                   alt={`${car.title} - ${car.owner}`}
                   fill
-                  className="object-cover w-full h-full"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
+                  sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
                   priority={car.id === "01"}
                 />
 
                 <span
                   className="fc-display absolute bottom-4 left-4 text-[11px] tracking-[0.2em] uppercase px-2.5 py-1 z-10"
-                  style={{ backgroundColor: "#e8eaec", color: "#0a0b0d" }}
+                  style={{
+                    backgroundColor: "#e8eaec",
+                    color: "#0a0b0d",
+                  }}
                 >
                   {car.chassis}
                 </span>
@@ -144,6 +118,7 @@ export default function FeaturedCars() {
                 >
                   {car.owner}
                 </span>
+
                 <h3
                   className="fc-display font-medium text-xl mb-4"
                   style={{ color: "#f2f3f4" }}
@@ -159,10 +134,12 @@ export default function FeaturedCars() {
                     <Calendar size={14} style={{ color: "#6b6f76" }} />
                     {car.year}
                   </span>
+
                   <span className="flex items-center gap-1.5">
                     <Gauge size={14} style={{ color: "#6b6f76" }} />
                     {car.mileage}
                   </span>
+
                   <span className="flex items-center gap-1.5">
                     <MapPin size={14} style={{ color: "#6b6f76" }} />
                     {car.city}
