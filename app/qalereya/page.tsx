@@ -168,11 +168,19 @@ export default function QaleriyaPage() {
         </div>
       </section>
 
-      {/* Mobil filter overlay */}
+      {/*
+        Mobil filter overlay — DÜZƏLİŞ:
+        Əvvəlki versiyada `fixed inset-0` istifadə olunurdu, yəni overlay
+        `top: 0`-dan başlayırdı — düz Navbar-ın da yerləşdiyi nöqtədən.
+        Nəticədə overlay-in başlıq sətri (Şassi kodu / X) Navbar-ın üstünə
+        "yapışırdı". Həll: overlay-i Navbar-ın hündürlüyü qədər (80px,
+        Navbar-dakı h-20 ilə eynidir) aşağıdan başladırıq və z-index-i
+        Navbar-ın z-50-dən aşağı saxlayırıq ki, Navbar həmişə üstdə qalsın.
+      */}
       {filtersOpen && (
         <div
-          className="fixed inset-0 z-40 md:hidden"
-          style={{ backgroundColor: "#0a0b0d" }}
+          className="fixed inset-x-0 bottom-0 z-40 md:hidden overflow-y-auto"
+          style={{ top: "80px", backgroundColor: "#0a0b0d" }}
         >
           <div
             className="flex items-center justify-between px-6 py-5"
@@ -187,6 +195,7 @@ export default function QaleriyaPage() {
             <button
               onClick={() => setFiltersOpen(false)}
               style={{ color: "#f2f3f4" }}
+              aria-label="Bağla"
             >
               <X size={22} />
             </button>
@@ -232,6 +241,7 @@ export default function QaleriyaPage() {
                     src={car.image}
                     alt={`${car.title} - ${car.owner}`}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover w-full h-full absolute inset-0"
                   />
                 )}
