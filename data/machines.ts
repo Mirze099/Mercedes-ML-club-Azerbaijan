@@ -1,18 +1,18 @@
 export const machines = [
   {
     id: "01",
-    owner: "Sabo",
+    owner: "Sabo (Admin)",
     chassis: "W163",
-    title: "ML 350 4MATIC",
-    year: 2004,
+    title: "ML 350 Final Edition 4MATIC",
+    year: 2005,
     mileage: 187000,
     city: "Bakı",
     fuel: "Benzin",
-    transmission: "Avtomat",
-    color: "Brilliant Silver Metallic",
+    transmission: "5 Pilləli Avtomat",
+    color: "Brilliant Silver Metallic (744U)",
     engine: "3.7L V6 M112",
-    power: "235 a.g.",
-    torque: "350 Nm",
+    power: "232 a.g.",
+    torque: "345 Nm",
     drivetrain: "4MATIC",
     image: "/images/Sabo/075.png",
     images: [
@@ -23,7 +23,8 @@ export const machines = [
       "/images/Sabo/075-5.png",
     ],
     highlighted: true,
-    desc: "Mercedes-Benz ML 350 4MATIC W163 modeli komfort və etibarlılığı ilə seçilən SUV-lərdən biridir. Avtomobil daim vaxtında texniki qulluq görüb və gündəlik istifadə olunur. Tam ötürücü sistemi, geniş salonu və komfortlu sürüşü ilə ailə və uzun səfərlər üçün ideal seçimdir.",
+
+    desc: "Azərbaycan Mercedes-Benz ML Club-un admininə məxsus olan bu 2005 Mercedes-Benz ML 350 Final Edition 4MATIC W163 modelidir. Zavoddan Brilliant Silver Metallic rəngi, qara dəri salonu, ağac dekorları və zəngin komplektasiyası ilə istehsal olunan bu avtomobil W163 seriyasının son və ən xüsusi versiyalarından biridir. 3.7L M112 V6 benzin mühərriki, 5 pilləli avtomatik sürətlər qutusu və daimi 4MATIC tam ötürücü sistemi həm şəhər, həm də uzun səfərlərdə yüksək komfort və etibarlılıq təqdim edir. Avtomobil daim vaxtında texniki qulluq görmüş, orijinallığını qoruyub saxlamış və klub tədbirlərində tez-tez iştirak edən nümunələrdən biridir.",
   },
 
   {
