@@ -8,15 +8,15 @@ const FOOTER_LINKS = {
   Klub: [
     { href: "/haqqimizda", label: "Haqqımızda" },
     { href: "/uzvler", label: "Üzv ol" },
-    { href: "/tedbirler", label: "Tədbirlər" },
+    // { href: "/tedbirler", label: "Tədbirlər" },
   ],
   Katalog: [
     { href: "/qalereya", label: "Bütün elanlar" },
-    { href: "/qalereya/elan-yerlesdir", label: "Elan yerləşdir" },
+    { href: "/elaqe", label: "Elan yerləşdir" },
   ],
   Əlaqə: [
     { href: "/elaqe", label: "Bizimlə əlaqə" },
-    { href: "/qaydalar", label: "Klub qaydaları" },
+    { href: "/haqqimizda", label: "Klub qaydaları" },
   ],
 };
 

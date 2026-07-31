@@ -8,8 +8,9 @@ import Image from "next/image";
 const NAV_LINKS = [
   { href: "/", label: "Ana səhifə" },
   { href: "/uzvler", label: "Üzvlər" },
-  { href: "/tedbirler", label: "Tədbirlər" },
+  // { href: "/tedbirler", label: "Tədbirlər" },
   { href: "/qalereya", label: "Qalereya" },
+  { href: "/model-hekayesi", label: "Model Hekayəsi" },
   { href: "/haqqimizda", label: "Haqqımızda" },
   { href: "/elaqe", label: "Əlaqə" },
 ];

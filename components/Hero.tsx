@@ -98,7 +98,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="/media/hero-poster.png"
+        poster="/images/ML/ML-Group.png"
       >
         <source src="/media/hero-loop.mp4" type="video/mp4" />
       </video>
